@@ -16,15 +16,7 @@ const View = ({ src }: { src: string }, index: number) => {
   const mainControls = useAnimation();
 
   useEffect(() => {
-    let animationCancelled = false;
-
-    if (inView && !animationCancelled) {
-      mainControls.start("visible");
-    }
-
-    return () => {
-      animationCancelled = true;
-    };
+    mainControls.start("visible");
   }, [inView, mainControls]);
 
   return (

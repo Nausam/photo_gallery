@@ -15,7 +15,10 @@ const Upload = () => {
   const router = useRouter();
 
   return (
-    <Button asChild className="px-20 py-8 text-lg font-bold">
+    <Button
+      asChild
+      className="px-20 py-8 text-lg font-bold bg-white border-2 text-black hover:bg-slate-900 hover:text-white  transition-all duration-300 ease-in-out"
+    >
       <CldUploadButton
         uploadPreset="za_wedding"
         onUpload={(result) => {
